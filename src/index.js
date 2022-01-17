@@ -7,6 +7,7 @@ import {Body} from './components/body'
 import store from './store/store'
 import {Cart} from './components/cart'
 import {Main} from './components/main'
+import {ProductPage} from './components/products/productpage'
 
 
 
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route path='/' element={<Main/>}/>
         <Route path='/cat' element={<Cart/>}/>
         <Route path='/profile' element={<Cart/>}/>
+        <Route path='/products' element={<ProductPage/>}/>
         {/* <Route path='?shopitem' /> */}
       </Route>
     </Routes>
@@ -27,8 +29,18 @@ ReactDOM.render(
 ,
   document.getElementById('root')
 );
+if(window.localStorage.getItem('sign') == null){
+  window.localStorage.setItem('sign',false)
+}else if(window.localStorage.getItem('sign') == false){
+  
+}
+// window.localStorage.setItem('singuped',false)
+let x = window.localStorage.getItem('singuped')
+console.log('signup :',x)
 
-setInterval(() => {
-  let x = document.getElementById('slidewrap')
-  console.log(x.style.left)
-}, 100);
+const _A_links = document.querySelectorAll('.routLink')
+for(let i = 0; i < _A_links.length; i++){
+  _A_links[i].addEventListener('click',(e)=>{
+    e.preventDefault()
+  })
+}

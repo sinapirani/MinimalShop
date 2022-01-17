@@ -2,8 +2,15 @@ import { useState } from "react"
 import { useEffect } from "react"
 import { useRef } from "react"
 
-export function FirstSlider(){
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import React from "react"
+import ReactDOM from "react-dom"
+import { SliderPop } from "./slider-pop"
+import { SliderNew } from "./slider-new"
 
+export function FirstSlider(){
+    AOS.init()
     const [section,setSection] = useState('pop')
     const pop = useRef(null)
     const newItem = useRef(null)
@@ -17,7 +24,8 @@ export function FirstSlider(){
                 newItem.current.classList.add('text-zink-500')
                 newItem.current.classList.remove('text-blue-600')
                 wrap.current.style.left = '0px'
-                wrap.current.style.right = 'auto'                
+                wrap.current.style.right = 'auto'
+                ReactDOM.render(<SliderPop/>,document.getElementById('slidezone'))   
                 break
             case 'new':
                 newItem.current.classList.add('text-blue-600')
@@ -26,13 +34,14 @@ export function FirstSlider(){
                 pop.current.classList.remove('text-blue-600')
                 // wrap.current.style.right = '0px'
                 wrap.current.style.left = '100px'
+                ReactDOM.render(<SliderNew/>,document.getElementById('slidezone'))   
                 break
 
         }
     },[section])
 
     return(
-        <div className="w-screen box-border mt-5 h-60 flex items-center " > 
+        <div  className="w-screen box-border mt-5 h-60 flex items-center" > 
             <div className="flex box-border h-full w-1/6 items-center justify-center">
 
                 <div className=" box-border flex -rotate-90 items-start justify-center flex-wrap">
@@ -44,7 +53,8 @@ export function FirstSlider(){
                     <div ref={wrap} id="slidewrap" className=" box-border w-20 bg-slate-200 h-1 flex-wrap absolute -bottom-2 "></div>                    
                 </div> 
             </div>
-            <div className=" box-border bg-cyan-500 h-full w-5/6 "></div>
+            <div id="slidezone" className=" box-border  h-full w-5/6 ">
+            </div>
         </div>
     )
 }

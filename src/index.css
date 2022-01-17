@@ -14,6 +14,16 @@ body{
 }
 
 #slidewrap{
-    transition: 2s;
-    animation: wrapleft 2s;
+    transition: .5s;
+}
+#swiper-pop .swiper-slide{
+    overflow: hidden;
+    border-radius: 25px;
+}
+.footer-btn{
+    -webkit-tap-highlight-color: transparent;
+}
+
+.animate__animated.animate__fadeIn{
+    --animate-duration: .5s
 }
