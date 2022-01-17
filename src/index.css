@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+}
+#footer{
+    box-shadow: 0px 2px 50px 5px rgb(196, 196, 196);
+}
+#headtext{
+    font-family: Robbot;
+}
+
+#slidewrap{
+    transition: 2s;
+    animation: wrapleft 2s;
+}
