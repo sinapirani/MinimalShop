@@ -27,3 +27,6 @@ body{
 .animate__animated.animate__fadeIn{
     --animate-duration: .5s
 }
+button{
+    -webkit-tap-highlight-color: transparent;
+}

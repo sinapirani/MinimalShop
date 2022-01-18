@@ -37,10 +37,3 @@ if(window.localStorage.getItem('sign') == null){
 // window.localStorage.setItem('singuped',false)
 let x = window.localStorage.getItem('singuped')
 console.log('signup :',x)
-
-const _A_links = document.querySelectorAll('.routLink')
-for(let i = 0; i < _A_links.length; i++){
-  _A_links[i].addEventListener('click',(e)=>{
-    e.preventDefault()
-  })
-}
