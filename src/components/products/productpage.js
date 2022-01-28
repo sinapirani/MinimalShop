@@ -32,7 +32,7 @@ export function ProductPage(){
                     )
                 })
                 }
-            </div>
+             </div>
         </div>
 
     )
