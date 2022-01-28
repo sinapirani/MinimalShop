@@ -1,11 +1,11 @@
 
-import { Header } from "./header"
-import { FirstSlider } from "./main/slidermain"
+import { Header } from "../header/header"
+import { FirstSlider } from "./slidermain"
 import Aos from "aos"
-import { Section } from "./section"
-import { SliderPop } from "./main/slider-pop"
-import { SliderRoom } from "./main/slider-room"
-import { HeaderBanner } from './header-banner'
+import { Section } from "../section"
+import { SliderPop } from "./slider-pop"
+import { SliderRoom } from "./slider-room"
+import { HeaderBanner } from '../header/header-banner'
 
 export function Main(){
     Aos.init()

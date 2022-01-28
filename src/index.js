@@ -5,8 +5,8 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import {Body} from './components/body'
 import store from './store/store'
-import {Cart} from './components/cart'
-import {Main} from './components/main'
+import {Cart} from './components/cart/cart'
+import {Main} from './components/main/main'
 import {ProductPage} from './components/products/productpage'
 
 

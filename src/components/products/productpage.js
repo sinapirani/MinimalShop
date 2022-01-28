@@ -4,14 +4,20 @@ import ssofa3  from './pictures/sofa3.jpg'
 import ssofa4 from './pictures/sofa4.jpg'
 import ssofa5 from './pictures/sofa5.jpg'
 import ssofa6 from './pictures/sofa6.jpg'
-import {Header} from '../header'
+import {Header} from '../header/header'
 import { cartADD } from '../../store/cart'
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 
 export function ProductPage(){
+
+    const items = useSelector(state=>state.items)
+
+    const eventkk = (id)=>{
+        console.log(id);
+    }
     const dis = useDispatch()
-    const addToCart = ()=>{
-        dis(cartADD({id:1,name:'hello'}))
+    const addToCart = (item)=>{
+        
     }
 
     return(
@@ -28,9 +34,7 @@ export function ProductPage(){
                             <span className=' bg-green-800 text-green-200 rounded-md px-2 font-bold mr-1 text-xs ' >G</span>
                         </div>
                         <h5 className=' font-semibold bg-gradient-to-r from-blue-800 to-blue-500 text-transparent bg-clip-text text-md rounded-md mt-1' >10,000,000</h5>
-                        <button onClick={addToCart} className=' active:text-blue-200  bg-gradient-to-r from-blue-800 to-blue-500 px-3 py-1 rounded-md mt-3 text-white' >add to cart</button>
-
-
+                        <button onClick={()=>dis(addToCart())} className=' active:text-blue-200  bg-gradient-to-r from-blue-800 to-blue-500 px-3 py-1 rounded-md mt-3 text-white' >add to cart</button>
                     </div>
                 </div>
             </div>

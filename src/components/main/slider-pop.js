@@ -38,7 +38,10 @@ export function SliderPop(){
     return(
         <Swiper id='swiper-pop' data-aos="fade-up" data-aos-delay='300' className=" h-full" slidesPerView={2} modules={[EffectCoverflow]} effect="coverflow" centeredSlides >
             <SwiperSlide className=" bg-stone-600">
-                <img src={prod} onClick={()=> pushUrl('/products')} alt=""  className="h-full w-full"/>
+                <img src={prod} onClick={()=>{
+                    window.history.pushState({},'','/products')
+                    window.dispatchEvent(new Event('popstate'))
+                } } alt=""  className="h-full w-full"/>
             </SwiperSlide>
             <SwiperSlide className=" bg-stone-200">
                 <img src={prod2} alt="" onClick={()=> pushUrl('/products')} className="h-full w-full"/>
