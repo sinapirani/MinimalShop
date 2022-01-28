@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import {Body} from './components/body'
+import {Body} from './components/main/body'
 import store from './store/store'
 import {Cart} from './components/cart/cart'
 import {Main} from './components/main/main'
@@ -17,7 +17,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Body/>}>
         <Route path='/' element={<Main/>}/>
-        <Route path='/cat' element={<Cart/>}/>
+        <Route path='/cart' element={<Cart/>}/>
         <Route path='/profile' element={<Cart/>}/>
         <Route path='/products' element={<ProductPage/>}/>
         {/* <Route path='?shopitem' /> */}
