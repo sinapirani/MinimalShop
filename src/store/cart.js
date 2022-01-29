@@ -19,7 +19,7 @@ export const cartSlice = createSlice({
         },
         cartREMOVE: (state,action)=>{
             let targetIndex = state.items.findIndex(item => item.id === action.payload)
-            state.totalcount -= +state.items[targetIndex].price
+            state.totalcount -= +state.items[targetIndex].price * +state.items[targetIndex].count
             if(targetIndex > -1 ){
                 state.items.splice(targetIndex,1)
             }
