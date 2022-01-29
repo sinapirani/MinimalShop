@@ -23,7 +23,7 @@ export function CartShower({name,id,price,img,count}){
             <div className=" justify-evenly items-center flex w-full h-20">
                 <div className="flex justify-center items-center w-1/3" >
                     <img onClick={countdown} className=" w-5 h-5 " src="assest/left.svg" alt="left" />
-                    <p className="text-3xl mx-3 box-border font-medium text-slate-700" >{count}</p>
+                    <p className="text-3xl mx-3 box-border font-medium text-slate-700 text-blue-500 " >{count}</p>
                     <img onClick={countup} className=" w-5 h-5 " src="assest/right.svg" alt="right" />
                 </div>
                 <img onClick={remove} src="assest/trash.svg" className="h-6  w-1/3" alt=""  />
