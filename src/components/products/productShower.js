@@ -1,15 +1,15 @@
 import { useSelector,useDispatch } from "react-redux"
-import cart, { cartADD } from "../../store/cart"
+import { cartADD } from "../../store/cart"
 
 export function ProductShower({id,name,price,img,key}){
 
     const dis = useDispatch()
     const cartProducts = useSelector(state => state.cart.items)
     const adder = ()=>{
-        !cartProducts.some(el => el.id === id) ? dis(cartADD({id,name,price,count:1,img})) : console.log('');
+        if(!cartProducts.some(el => el.id === id)){
+            dis(cartADD({id,name,price,count:1,img}))
+        }
         const item = cartProducts.findIndex(item => item.id === 1)
-        console.log(item);
-
     }
 
     return(

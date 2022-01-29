@@ -22,7 +22,7 @@ export function ProductPage(){
 
 
     return(
-        <div data-aos="fade-down" className=' min-h-full w-full'>
+        <div data-aos="fade-down" className=' min-h-full w-full pb-44'>
             <Header />
             <div className="flex flex-row flex-wrap items-start w-12/12 min-h-screen mx-auto justify-center py-8">
                 {
