@@ -30,3 +30,7 @@ body{
 button{
     -webkit-tap-highlight-color: transparent;
 }
+
+#cart-title{
+    height: 25rem;
+}

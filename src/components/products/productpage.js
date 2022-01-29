@@ -7,17 +7,17 @@
 import {Header} from '../header/header'
 import { cartADD } from '../../store/cart'
 import { useDispatch,useSelector } from 'react-redux'
-import { ProductShower } from './productShowe'
+import { ProductShower } from './productShower'
 
 export function ProductPage(){
 
     const products = [
-        {id:1,name:'Siba',price:'1000$',img: 'assest/pictures/sofa.jpg'},
-        {id:2,name:'Saltanat',price:'1200$',img:'assest/pictures/sofa2.jpg'},
-        {id:3,name:'Max',price:'1400$',img: 'assest/pictures/sofa3.jpg'},
-        {id:4,name:'JavaScript',price:'1050$',img: 'assest/pictures/sofa4.jpg'},
-        {id:5,name:'Lisila',price:'1570$',img: 'assest/pictures/sofa5.jpg'},
-        {id:6,name:'Niusha',price:'1880$',img: 'assest/pictures/sofa6.jpg'},
+        {id:1,name:'Siba',price:'1000',img: 'assest/pictures/sofa.jpg'},
+        {id:2,name:'Saltanat',price:'1200',img:'assest/pictures/sofa2.jpg'},
+        {id:3,name:'Max',price:'1400',img: 'assest/pictures/sofa3.jpg'},
+        {id:4,name:'JavaScript',price:'1050',img: 'assest/pictures/sofa4.jpg'},
+        {id:5,name:'Lisila',price:'1570',img: 'assest/pictures/sofa5.jpg'},
+        {id:6,name:'Niusha',price:'1880',img: 'assest/pictures/sofa6.jpg'},
     ]
 
 
@@ -28,7 +28,7 @@ export function ProductPage(){
                 {
                 products.map((item,key)=>{
                     return(
-                        <ProductShower key={key} id={item.id} name={item.name} price={item.price} img={item.img} />
+                        <ProductShower key={key} id={item.id} name={item.name} price={item.price} img={item.img} count={item.count}/>
                     )
                 })
                 }

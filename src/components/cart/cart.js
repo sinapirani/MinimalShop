@@ -7,13 +7,13 @@ export function Cart(){
     const cartItems = useSelector(state=>state.cart.items)
 
     return(
-        <div className=" min-h-screen bg-yellow-200 ">
+        <div className=" min-h-screen ">
             <Header/>
-            <div className="w-full h-full bg-green-900">
+            <div className="w-full h-full">
                 {
                     cartItems.map((item,key)=>{
                         return(
-                            <CartShower />
+                            <CartShower key={key} id={item.id} name={item.name} price ={item.price} img={item.img} count={item.count} />
                         )
                     })
                 }

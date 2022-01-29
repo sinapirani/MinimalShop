@@ -6,7 +6,10 @@ export function ProductShower({id,name,price,img,key}){
     const dis = useDispatch()
     const cartProducts = useSelector(state => state.cart.items)
     const adder = ()=>{
-        !cartProducts.some(el => el.id === id) ? dis(cartADD({id,name,price})) : console.log('');
+        !cartProducts.some(el => el.id === id) ? dis(cartADD({id,name,price,count:1,img})) : console.log('');
+        const item = cartProducts.findIndex(item => item.id === 1)
+        console.log(item);
+
     }
 
     return(

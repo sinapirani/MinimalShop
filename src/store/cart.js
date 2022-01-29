@@ -13,9 +13,13 @@ export const cartSlice = createSlice({
                 ...state.items,
                 action.payload
             ]
+        },
+        cartREMOVE: (state,action)=>{
+            let targetIndex = state.items.findIndex(item => item.id === action.payload)
+            targetIndex > -1 ? state.items.splice(targetIndex,1) : console.log('');
         }
     }
 })
 
-export const {cartADD} = cartSlice.actions
+export const {cartADD,cartREMOVE} = cartSlice.actions
 export default cartSlice.reducer
