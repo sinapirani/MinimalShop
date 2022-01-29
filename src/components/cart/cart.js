@@ -10,15 +10,15 @@ export function Cart(){
         <div className=" min-h-screen ">
             <Header/>
             <div className="w-full h-full pb-44">
+                <div>
                 {
                     cartItems.map((item,key)=>{
-                        
                         return(
                             <CartShower key={key} id={item.id} name={item.name} price ={item.price} img={item.img} count={item.count} />
                         )
                     })
                 }
-
+                </div>
                 <div className="w-5/6 mx-auto flex justify-center text-center flex-col  items-center mt-20" >
                     <div className="flex justify-center items-center" >
                         <p className="text-6xl bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent font-extrabold " >Total:<br/>{total}<span>$</span></p>    

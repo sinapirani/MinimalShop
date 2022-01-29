@@ -1,7 +1,7 @@
 import { useSelector,useDispatch } from "react-redux"
 import { cartADD } from "../../store/cart"
 
-export function ProductShower({id,name,price,img,key}){
+export function ProductShower({id,name,price,img}){
 
     const dis = useDispatch()
     const cartProducts = useSelector(state => state.cart.items)
@@ -13,7 +13,7 @@ export function ProductShower({id,name,price,img,key}){
     }
 
     return(
-        <div key={key} data-id={id} className=" h-40 w-5/6 mx-2 mb-9 shadow-slate-400 shadow-2xl rounded-3xl overflow-hidden bg-white flex flex-row-reverse " >
+        <div data-id={id} className=" h-40 w-5/6 mx-2 mb-9 shadow-slate-400 shadow-2xl rounded-3xl overflow-hidden bg-white flex flex-row-reverse " >
             <img className='h-full bg-cover w-1/3' src={img} alt={name} />
             <div className=" h-full flex flex-col justify-center items-start pl-4 w-2/3">
 
