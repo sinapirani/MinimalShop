@@ -77,16 +77,15 @@ export function Body(){
           
           <div id="footer" className=" w-5/6 fixed h-24 bg-white shadow-slate-400 m-auto inset-x-0 bottom-9 rounded-3xl flex justify-between items-center overflow-hidden ">
 
-                <div onClick={()=>{setPage('cart')}} className="animate__animated animate__fadeIn w-1/3 p-0 flex justify-center items-center select-none footer-btn">
+                <div onClick={()=>{setPage('cat')}} className="animate__animated animate__fadeIn w-1/3 p-0 flex justify-center items-center select-none footer-btn">
                   <Link className="w-full h-full flex flex-row justify-center items-center" to={'/cart'}>
-                  <svg ref={cat} id="cat" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg className=" fill-transparent h-8 w-8" ref={cat} id="cat" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.42245 19.8203C7.84445 19.8203 8.18745 20.1633 8.18745 20.5853C8.18745 21.0073 7.84445 21.3493 7.42245 21.3493C7.00045 21.3493 6.65845 21.0073 6.65845 20.5853C6.65845 20.1633 7.00045 19.8203 7.42245 19.8203Z" stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18.6749 19.8203C19.0969 19.8203 19.4399 20.1633 19.4399 20.5853C19.4399 21.0073 19.0969 21.3493 18.6749 21.3493C18.2529 21.3493 17.9099 21.0073 17.9099 20.5853C17.9099 20.1633 18.2529 19.8203 18.6749 19.8203Z" stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M2.75 3.25L4.83 3.61L5.793 15.083C5.871 16.018 6.652 16.736 7.59 16.736H18.502C19.398 16.736 20.158 16.078 20.287 15.19L21.236 8.632C21.353 7.823 20.726 7.099 19.909 7.099H5.164" stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M14.1255 10.795H16.8985" stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-
-                    <p ref={catText} className="animate__animated animate__fadeIn transition-all duration-75 ease-in  text-black font-extrabold ml-1">Category</p>
+                    <p ref={catText} className="animate__animated animate__fadeIn transition-all duration-75 ease-in text-black font-extrabold ml-1">Cart</p>
                   </Link>
                 </div>  
 

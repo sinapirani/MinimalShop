@@ -8,6 +8,7 @@ import store from './store/store'
 import {Cart} from './components/cart/cart'
 import {Main} from './components/main/main'
 import {ProductPage} from './components/products/productpage'
+import {Profile} from '././components/profile/profile'
 
 
 
@@ -19,7 +20,7 @@ ReactDOM.render(
       <Route path="/" element={<Body/>}>
         <Route path='/' element={<Main/>}/>
         <Route path='/cart' element={<Cart/>}/>
-        <Route path='/profile' element={<Cart/>}/>
+        <Route path='/profile' element={<Profile/>}/>
         <Route path='/products' element={<ProductPage/>}/>
         {/* <Route path='?shopitem' /> */}
       </Route>
