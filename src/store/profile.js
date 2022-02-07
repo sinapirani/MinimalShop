@@ -5,7 +5,8 @@ export const profileSlice = createSlice({
     initialState:{
         profile:{
             name: '',
-            username: '',
+            username: 'sss',
+            password: 'sss',
             number: '',
             avatar: ''
         },
@@ -14,6 +15,9 @@ export const profileSlice = createSlice({
     reducers:{
         sign: (state,action)=>{
             state.sign = action.payload
+        },
+        profile: (state,action)=>{
+            state.profile = action.payload
         }
     }
 })
