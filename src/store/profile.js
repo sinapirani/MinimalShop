@@ -5,10 +5,9 @@ export const profileSlice = createSlice({
     initialState:{
         profile:{
             name: '',
-            username: 'sss',
-            password: 'sss',
-            number: '',
-            avatar: ''
+            lastname: '',
+            username: '',
+            password: '',
         },
         sign: false,
     },
@@ -18,9 +17,12 @@ export const profileSlice = createSlice({
         },
         profile: (state,action)=>{
             state.profile = action.payload
+        },
+        signup: (state,action)=>{
+            state.sign = action.payload
         }
     }
 })
 
-export const {sign} = profileSlice.actions
+export const {sign,profile,signup} = profileSlice.actions
 export default profileSlice.reducer

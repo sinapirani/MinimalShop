@@ -31,11 +31,11 @@ ReactDOM.render(
 ,
   document.getElementById('root')
 );
-if(window.localStorage.getItem('sign') == null){
-  window.localStorage.setItem('sign',false)
-}else if(window.localStorage.getItem('sign') == false){
+// if(window.localStorage.getItem('sign') == null){
+//   window.localStorage.setItem('sign',false)
+// }else if(window.localStorage.getItem('sign') == false){
   
-}
-// window.localStorage.setItem('singuped',false)
-let x = window.localStorage.getItem('singuped')
-console.log('signup :',x)
+// }
+// // window.localStorage.setItem('singuped',false)
+// let x = window.localStorage.getItem('singuped')
+// console.log('signup :',x)

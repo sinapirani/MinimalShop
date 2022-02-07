@@ -1,36 +1,45 @@
 
 
 import React from 'react';
-import { useRef } from 'react';
-import { useSelector,useDispatch } from 'react-redux';
-import { sign } from '../../store/profile';
+import { useRef,useState,useEffect } from 'react';
+import ReactDOM from 'react-dom'
+import { LoginForm } from './forms/login-form';
+import { SignupForm } from './forms/signup-form';
 
 export function Login({}) {
 
-    const store = useSelector(state => state.profile)
-    const dis = useDispatch()
-    const password = useRef(null);
-    const username = useRef(null);
-
-
-    const formSubmit = (e) => {
-        e.preventDefault()
-        if(username.current.value === store.profile.username && password.current.value === store.profile.password ){
-            dis(sign(true)) 
-        }else{
-            alert('wrong password')
+    const formDad = useRef(null);
+    const [active,setActive] = useState('login')
+    const nonActiveClass = 'w-1/2 h-full text-blue-700 font-bold text-2xl flex justify-center items-center'
+    const activeClass = 'w-1/2 h-full bg-blue-300 text-blue-700 font-bold text-2xl flex justify-center items-center'
+    useEffect(()=>{
+        switch(active){
+            case 'login':
+                ReactDOM.render(<LoginForm />,formDad.current)
+                break;
+            case 'signup':
+                ReactDOM.render(<SignupForm />,formDad.current)
+                break;
         }
+    },[active])
 
-    }
 
     return (
         <div className=' h-screen mx-auto flex justify-center items-center'>
-            <div className=' shadow-2xl shadow-blue-500/50 h-96 w-11/12 bg-blue-500 rounded-3xl flex flex-col justify-center items-center ' >
-                <form action="" onSubmit={formSubmit} class ='flex flex-col justify-center items-center w-full' >
-                    <input ref={username} type="text" name='username' placeholder='username' className='rounded-full h-16 w-10/12 pl-10 outline-none text-2xl bg-blue-300 text-blue-900 placeholder-blue-400 font-bold'/>
-                    <input ref={password} type="password" name='password' placeholder='paasword' className='mt-5 rounded-full h-16 w-10/12 pl-10 outline-none text-2xl bg-blue-300 text-blue-900 placeholder-blue-400 font-bold'/>
-                    <button type="submit" className='mt-5 rounded-full h-16 w-10/12 outline-none text-2xl bg-white text-blue-500 font-bold active:bg-blue-300'>login</button>
-                </form>
+            <div className=' shadow-2xl shadow-blue-500/50 py-10 w-11/12 bg-blue-500 rounded-3xl flex flex-col justify-center items-center ' >
+                <div className ='h-20 w-10/12 mb-5 rounded-3xl bg-blue-100 flex justify-center items-center overflow-hidden'>
+                    
+                <button onClick={()=> setActive('login')} className={active ==='login' ? activeClass : nonActiveClass}>Login</button>
+                <button onClick= {()=> setActive('signup')} className={active ==='signup' ? activeClass : nonActiveClass}>Signup</button>
+
+                    
+                </div>
+
+                <div ref={formDad} id='formDad'>
+
+                </div>
+
+
             </div>
         </div>
     );

@@ -34,3 +34,12 @@ button{
 #cart-title{
     height: 25rem;
 }
+.active svg{
+    fill: black;
+}
+.active p{
+    display: block;
+}
+.activetab{
+    background-color: black;
+}
