@@ -3,20 +3,26 @@
 import React from 'react';
 import { useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { signup } from '../../../store/profile';
+import {signup,sign} from '../../../store/profile'
+
 
 export function SignupForm() {
+    const dis = useDispatch();
     const name = useRef(null);
     const lastname = useRef(null);
     const username = useRef(null);
     const password = useRef(null);
 
-    const [state,useState] = useState(0)
-
     // const dis = useDispatch()
     const formSubmit = (e) => {
-        e.preventDefault()
-
+        e.preventDefault()  
+        dis(signup({
+            name: name.current.value,
+            lastname: lastname.current.value,
+            username: username.current.value,
+            password: password.current.value
+        }))
+        dis(sign(true))
     }
 
     return (

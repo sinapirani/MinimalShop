@@ -19,7 +19,7 @@ export const profileSlice = createSlice({
             state.profile = action.payload
         },
         signup: (state,action)=>{
-            state.sign = action.payload
+            state.profile = action.payload
         }
     }
 })

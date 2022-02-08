@@ -1,14 +1,22 @@
 
 import { useSelector } from "react-redux";
 import { Login } from "./login";
+import {Header} from '../header/header'
+import { ProfileSigned } from "./profile-signed";
 
-export function Profile({}) {
+export function Profile() {
 
     const store = useSelector(state => state.profile)
     const sign = store.sign
-    if(sign){
-        return <p>logged in</p>
-    }else{
-        return <Login/>
-    }
+
+    return(
+        <div>
+            <Header/>
+            {
+                !sign ? <Login/> : <ProfileSigned/>
+            }
+        </div>
+
+    )
+
 }

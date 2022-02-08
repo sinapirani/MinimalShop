@@ -43,3 +43,6 @@ button{
 .activetab{
     background-color: black;
 }
+.h80{
+    height: 70vh;
+}
