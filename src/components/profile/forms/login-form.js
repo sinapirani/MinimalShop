@@ -7,16 +7,16 @@ import { useSelector } from 'react-redux';
 
 
 export function LoginForm() {
-    const state = useSelector(state => state.profile)
+    // const state = useSelector(state => state.profile)
     const username = useRef(null);
     const password = useRef(null);
     const formSubmit = (e) => {
         e.preventDefault()
-        if(username.current.value === state.profile.username && password.current.value === state.profile.password){
-            alert('login success')
-        }else{
-            alert('login failed')
-        }
+        // if(username.current.value === state.profile.username && password.current.value === state.profile.password){
+        //     alert('login success')
+        // }else{
+        //     alert('login failed')
+        // }
     }
     return (
         <form  action="" className =' flex flex-col justify-center items-center w-full' >

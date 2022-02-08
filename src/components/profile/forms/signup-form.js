@@ -11,15 +11,12 @@ export function SignupForm() {
     const username = useRef(null);
     const password = useRef(null);
 
-    const dis = useDispatch();
+    const [state,useState] = useState(0)
+
+    // const dis = useDispatch()
     const formSubmit = (e) => {
         e.preventDefault()
-        dis(signup({
-            name: name.current.value,
-            lastname: lastname.current.value,
-            username: username.current.value,
-            password: password.current.value
-        }))
+
     }
 
     return (
